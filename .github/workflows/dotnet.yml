@@ -27,4 +27,7 @@ jobs:
         dotnet-version: 5.0.x
 
     - name: Executar testes automatizados
-      run: dotnet test ${{ env.CAMINHO_PROJETO_TESTES }} --verbosity minimal --logger:"html;LogFileName=resultado-erros.html"
+      run: |
+        dotnet test ${{ env.CAMINHO_PROJETO_TESTES }} --verbosity minimal --logger:"html;LogFileName=resultado-erros.html"
+        cd ${{ env.NOME_DIR_PUBLICACAO }}
+        ls
