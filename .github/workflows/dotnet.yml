@@ -32,6 +32,9 @@ jobs:
 
     - name: Gerar relatório de erros
       if: failure()
+      env:
+        CAMINHO_RELATORIO_ERROS: ${{ env.CAMINHO_PROJETO_TESTES }}\TestResults\resultado-testes.html
       run: |
         cd ${{ env.CAMINHO_PROJETO_TESTES }}
         ls
+        echo ${{ env.CAMINHO_RELATORIO_ERROS }}
