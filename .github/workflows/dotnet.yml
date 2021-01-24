@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v2.2.2
       if: failure()
       env:
-        CAMINHO_RELATORIO_ERROS: ${{ env.CAMINHO_PROJETO_TESTES }}\TestResults\resultado-testes.html
+        CAMINHO_RELATORIO_ERROS: ${{ env.CAMINHO_PROJETO_TESTES }}/TestResults/resultado-testes.html
       with:
         name: resultado-execucao-testes.html
         path: ${{ env.CAMINHO_RELATORIO_ERROS }}
